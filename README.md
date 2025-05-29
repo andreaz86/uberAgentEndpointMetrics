@@ -62,29 +62,19 @@ The application collects the following endpoint metrics:
 
 1. Clone or download the project files to your target directory:
 ```bash
-git clone <repository-url>
-cd ua_endpoint_metrics
+git clone https://github.com/andreaz86/uberAgentEndpointMetrics
+cd uberAgentEndpointMetrics
 ```
 
-2. Initialize Go modules and install dependencies:
-```bash
-go mod init ua_endpoint_metrics
-go mod tidy
-```
-
-## Compilation
-
-### Building the Executable
-
-To compile the project into a Windows executable:
+2. To compile the project into a Windows executable:
 
 ```bash
 # Build for current architecture
-go build -o citrix_endpoint_metrics.exe main.go
+go build -o uaEndpointMetrics.exe main.go
 
 # Build for specific architecture (if needed)
 # For 64-bit Windows
-$env:GOOS="windows"; $env:GOARCH="amd64"; go build -o citrix_metrics_x64.exe main.go
+$env:GOOS="windows"; $env:GOARCH="amd64"; go build -o uaEndpointMetrics.exe main.go
 
 ```
 
@@ -97,7 +87,7 @@ To integrate this tool with uberAgent for automated collection, add the followin
 [Timer]
 Name              = EndpointMetrics
 Interval          = 60000
-Script            = "#exePath#" (example "C:\Scripts\citrix_endpoint_metrics.exe")
+Script            = "#exePath#" (example "C:\Scripts\uaEndpointMetrics.exe")
 ScriptContext     = Session0AsSystem
 ```
 
