@@ -1,5 +1,7 @@
 # Citrix Endpoint Metrics Collector
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 This Go project collects metrics from Citrix endpoint sessions using WMI queries and maps the SessionIDs to their corresponding SessionGUIDs from the Windows registry. **This tool is designed to work in conjunction with uberAgent** to provide comprehensive endpoint performance metrics for Citrix sessions.
 
 ## Overview
@@ -127,4 +129,4 @@ ua_endpoint_metrics/
 
 ## License
 
-[MIT License](LICENSE)
+[Apache 2.0 License](LICENSE)
