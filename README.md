@@ -80,6 +80,12 @@ $env:GOOS="windows"; $env:GOARCH="amd64"; go build -o uaEndpointMetrics.exe main
 
 ```
 
+## Deployment
+
+**Important Deployment Requirement**: The compiled executable (`uaEndpointMetrics.exe`) must be deployed on machines where **Citrix VDA (Virtual Delivery Agent) is installed**. This includes:
+
+
+The tool cannot collect Citrix endpoint metrics from machines without VDA, as it requires access to the Citrix WMI namespace (`ROOT\Citrix\EUEM`) which is only available on VDA-enabled systems.
 
 ## Usage
 
