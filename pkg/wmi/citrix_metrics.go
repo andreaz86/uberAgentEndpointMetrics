@@ -322,21 +322,21 @@ func GetCitrixMetrics() ([]CitrixEndpointMetric, error) {
 // PrintMetricKeyValue formats and prints a CitrixEndpointMetric in key=value format (same as PowerShell script)
 // Restored full output with selected metrics (previously excluded: AvgPrivilegedTime, AvgProcessorTime, AvgUserTime, ISP, RamAvgUsage, SessionID, SpeedUnit, Timestamp)
 func PrintMetricKeyValue(metric CitrixEndpointMetric) {
-	output := fmt.Sprintf("AvgBeaconLatency=%v AvgThroughputBytesRcvd=%v AvgThroughputBytesSent=%v City=%s ClientTimestamp=%v Country=%s EndpointIP=%s GpuAvgUsage=%v GpuMaxUsage=%v LatencyUnit=%s LinkSpeed=%v MaxPrivilegedTime=%v MaxProcessorTime=%v MaxThroughputBytesRcvd=%v MaxThroughputBytesSent=%v MaxUserTime=%v NetworkInterfaceType=%s RamMaxUsage=%v SessionGUID=%s SignalStrength=%v",
+	output := fmt.Sprintf("AvgBeaconLatency=%v AvgThroughputBytesRcvd=%v AvgThroughputBytesSent=%v ClientTimestamp=%v GpuAvgUsage=%v GpuMaxUsage=%v LinkSpeed=%v MaxPrivilegedTime=%v MaxProcessorTime=%v MaxThroughputBytesRcvd=%v MaxThroughputBytesSent=%v MaxUserTime=%v NetworkInterfaceType=%s RamMaxUsage=%v SessionGUID=%s SignalStrength=%v",
 		metric.AvgBeaconLatency,
 		// metric.AvgPrivilegedTime,     // EXCLUDED - uncomment to re-enable
 		// metric.AvgProcessorTime,      // EXCLUDED - uncomment to re-enable
 		metric.AvgThroughputBytesRcvd,
 		metric.AvgThroughputBytesSent,
 		// metric.AvgUserTime,           // EXCLUDED - uncomment to re-enable
-		metric.City,
+		//metric.City,
 		metric.ClientTimestamp,
-		metric.Country,
-		metric.EndpointIP,
+		//metric.Country,
+		//metric.EndpointIP,
 		metric.GpuAvgUsage,
 		metric.GpuMaxUsage,
 		// metric.ISP,                   // EXCLUDED - uncomment to re-enable
-		metric.LatencyUnit,
+		//metric.LatencyUnit,
 		metric.LinkSpeed,
 		metric.MaxPrivilegedTime,
 		metric.MaxProcessorTime,
